@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension version="3.4" type="pugin" group="content" method="upgrade">
+	<name>PLG_CONTENT_LINKPROTECT</name>
+	<author>Non</author>
+	<creationDate>Fed 2016</creationDate>
+	<copyright>Copyright 2016 Non, All rights Reserved</copyright>
+	<license>GNU/GPU</license>
+	<authorEmail>non@gmail.com</authorEmail>
+	<version>1.0.0</version>
+	<desciption>PLG_CONTENT_LINKPROTECT_DESC</desciption>
+	<files>
+		<filename plugin="linkprotect">linkprotect.php</filename>
+		<filename>index.html</filename>
+		<folder>helper</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.plg_content_linkprotect.ini</language>
+		<language tag="en-GB">language/en-GB.plg_content_linkprotect.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath=".administrator/components/com_content/models/fields">
+				<field 
+					name="warning_page"
+					type="modal_article"
+					edit="true"
+					required="true"
+					clear="false"
+					label="PLG_CONTENT_LINKPROTECT_WARNINGPAGE_LABEL"
+					description="PLG_CONTENT_LINKPROTECT_WARNINGPAGE_DESC"
+				/>
+					
+				<field 
+					name="new_window"
+					type="radio"
+					default="1"
+					class="btn-group btn-group-yesno"
+					label="PLG_CONTENT_LINKPROTECT_NEWTAB_LABEL"
+					description="PLG_CONTENT_LINKPROTECT_NEWTAB_DESC"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
