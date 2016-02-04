@@ -19,7 +19,7 @@
 	</languages>
 	<config>
 		<fields name="params">
-			<fieldset name="basic" addfieldpath=".administrator/components/com_content/models/fields">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_content/models/fields">
 				<field 
 					name="warning_page"
 					type="modal_article"
