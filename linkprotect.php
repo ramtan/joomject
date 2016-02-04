@@ -11,6 +11,7 @@ defined('_JEXEC') or die;
 
 class PlgContentLinkprotect extends JPlugin{
 
+	private $callbackFunction;
 
 	public function __construct(&$subject, $config = array()){
 
@@ -18,6 +19,8 @@ class PlgContentLinkprotect extends JPlugin{
 
 		require_once __DIR__.'/helper/helper.php';
 		$helper = new LinkProtectHelper($this->params);
+
+		$this->callbackFunction = array($helper, 'replaceLinks');
 	}
 
 
